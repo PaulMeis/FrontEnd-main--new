@@ -25,6 +25,7 @@ import{BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Voting from "./pages/Voting";
 import PersonalInformation from "./pages/PersonalInformation";
+import TransactionHistory from "./pages/TransactionHistory";
 function App() {
   return (
     <Router>
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="dash" element={<Dashboard/>}/>
         <Route exact path="voting" element={<Voting/>}/>
         <Route exact path="personal" element={<PersonalInformation/>}/>
+        <Route exact path="transaction" element={<TransactionHistory/>}/>
          <Route exact path="/signup" element={<Signup/>}/>
           <Route exact path="/forgotpassword" element={<ForgotPassword/>}/>
           <Route exact path="/login" element={<Login/>}/>

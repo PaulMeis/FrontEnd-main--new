@@ -22,7 +22,13 @@ import { FiMail, FiLock, FiUser, FiCalendar } from 'react-icons/fi';
 //import Loader, { ThreeCircles } from 'react-loader-spinner'; 
 
 
-const Signup = () => {
+//auth reudx
+import { connect } from 'react-redux';
+import { signupUser } from "../auth/actions/userActions";
+import { useNavigate } from "react-router-dom";
+
+const Signup = ({signupUser}) => {
+    const navigate = useNavigate();
     return (
         <div>
             <StyledFormArea>
@@ -40,8 +46,7 @@ const Signup = () => {
                         confirmEmail: "",
                         password: "",
                         confirmPassword: "",
-                        role: "",
-                        studentID: "",
+                        
 
 
 
@@ -60,8 +65,8 @@ const Signup = () => {
                         })
                     }
 
-                    onSubmit={(values, { setSubmitting }) => {
-                        console.log(values);
+                    onSubmit={(values, { setSubmitting, setFieldError }) => {
+                      signupUser(values, navigate, setFieldError, setSubmitting)
                     }}
                 >
 
@@ -154,4 +159,4 @@ const Signup = () => {
         </div>
     );
 };
-export default Signup;
+export default connect(null, {signupUser}) (Signup);

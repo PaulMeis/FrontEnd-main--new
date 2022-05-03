@@ -1,19 +1,22 @@
 // src/App.js
 import React, { Component } from 'react';
-import { ButtonGroup, StyledFormAreaVote } from '../components/Styles';
+import { ButtonGroup, ExtraText, StyledFormAreaVote } from '../components/Styles';
 import {Form, Formik} from 'formik';
-import { StyledTitle, colors } from '../components/Styles';
+import { ExtraTextVoting,StyledTitle, colors } from '../components/Styles';
 
 
 
 const list = [
-  {
+   
+
+{
     id: 1,
     name: 'Candidate 1',
     
     votes: 0
    
   },
+  
   {
     id: 2,
     name: 'Candidate 2',
@@ -29,6 +32,7 @@ const list = [
     name: 'Candidate 4',
     votes: 0
   }
+
 ];
 
 class Voting extends Component {
@@ -62,8 +66,10 @@ class Voting extends Component {
     
     return this.state.members.map(member => (
         <StyledFormAreaVote>
+            <ExtraTextVoting>
                   
       <Candidate key={member.id} id={member.id} name={member.name} votes={member.votes} onVote={this.handleEvent} />
+        </ExtraTextVoting>
         </StyledFormAreaVote>
     ));
   }

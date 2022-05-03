@@ -3,6 +3,7 @@ import styled from 'styled-components';
 //background
 import background from './../assets/background.png';
 
+
 // create buttons using react router 
 import {Link} from 'react-router-dom';
 
@@ -15,7 +16,11 @@ export const colors ={
     dark1: "#1F2937",
     dark2: "#4B5563",
     dark3: "#9CA3AF",
-    red: "#DC2626"
+    red: "#DC2626",
+    yellow: "#FFFF00",
+    brightGreen: "#AAFF00",
+    green: "#008000	"
+
 }
 
 //Styled components
@@ -46,6 +51,23 @@ color: ${(props) => props.color ? props.color : colors.primary};
 padding: 5px;
 margin-bottom: 25px;
 `;
+
+export const StyledSubTitlePersonalInformation = styled.p`
+font-size: 24px;
+text-align: center;
+color: ${colors.yellow};
+padding: 5px;
+margin-bottom: 25px;
+`;
+
+export const StyledSubTitleTransaction = styled.p`
+font-size: 24px;
+text-align: center;
+color: ${colors.yellow};
+padding: 5px;
+margin-bottom: 25px;
+`;
+
 
 
 export const Avatar = styled.div`
@@ -131,7 +153,7 @@ padding: 45px 55px;
 export const StyledFormButton = styled.button`
 padding: 10px;
 width: 150px;
-background-color: transparent;
+background-color: white;
 font-size: 16px;
 border: 2px solid ${colors.theme};
 border-radius: 25px;
@@ -139,7 +161,7 @@ color: ${colors.theme};
 transition: ease-in-out 0.3s;
 outline: 0;
 &:hover{
-    background-color: ${colors.theme};
+    background-color: ${colors.green};
     color: ${colors.primary};
     cursor: pointer;
 }
@@ -160,6 +182,15 @@ text-aign: center;
 color: ${(props) => (props.color? props.color : colors.light1)};
 padding: 2px;
 margin-top: 10px;
+`;
+
+export const ExtraTextVoting = styled.p`
+font-size: 30px;
+text-aign: center;
+color: ${colors.brightGreen};
+padding: 2px;
+margin-top: 10px;
+
 `;
 
 // Link to register page

@@ -19,9 +19,14 @@ import {FiMail, FiLock} from 'react-icons/fi';
 //Loader
 //import Loader, { ThreeCircles } from 'react-loader-spinner'; 
 
+//auth reudx
+import { connect } from 'react-redux';
+import { loginUser } from "../auth/actions/userActions";
+import { useNavigate } from "react-router-dom";
 
 
-const Login = () => {
+const Login = ({loginUser}) => {
+    const navigate = useNavigate();
     return (
         <div>
             <StyledFormArea>
@@ -42,8 +47,9 @@ const Login = () => {
                             password: Yup.string().min(10, "Invalid!").required("Required"),
                         })
                     }
-                    onSubmit={(values, {setSubmitting})=> {
+                    onSubmit={(values, {setSubmitting, setFieldError})=> {
                         console.log(values);
+                        loginUser(values, navigate, setFieldError, setSubmitting);
                     }}
                 >           
                
@@ -90,4 +96,4 @@ const Login = () => {
         </div>
     );
     };
-export default Login;
+export default connect (null,{loginUser} ) (Login);
