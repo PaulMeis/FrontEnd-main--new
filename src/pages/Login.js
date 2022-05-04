@@ -8,7 +8,8 @@ import {
     TextLink,
     ExtraText
 } from "./../components/Styles";
-import Logo from './../assets/nick project.png';
+
+import Logo from './../assets/seam.png';
 import React, {Component} from 'react';
 //formik
 import {Form, Formik} from 'formik';
@@ -88,9 +89,7 @@ const Login = ({loginUser}) => {
                 <ExtraText>
                     Forgot Password? <TextLink to="/forgotPassword">Reset Password!</TextLink>
                 </ExtraText>
-                <ExtraText>
-                    Need Help? <TextLink to="/help">FAQ Here!</TextLink>
-                </ExtraText>
+            
 
             </StyledFormArea>
         </div>

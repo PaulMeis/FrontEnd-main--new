@@ -1,9 +1,15 @@
-import {StyledTitle, StyledSubTitle, Avatar, StyledButton, ButtonGroup} from "./../components/Styles";
+import {StyledTitle,StyledCol,StyledDiv, StyledImage, ImgTitle, ImgDesc, StyledSubTitle, Avatar, StyledButton, ButtonGroup} from "./../components/Styles";
 
 import React, {Component} from 'react';
 
+// React strap
+import { Row, Col } from "reactstrap";
+
 //Logo
-import Logo from "./../assets/logo.PNG";
+import Logo from "./../assets/seam.png";
+import logo from "./../assets/logo.PNG";
+
+
 
 const Start = () => {
     return (
@@ -36,6 +42,7 @@ const Start = () => {
                 Signup
             </StyledButton>
         </ButtonGroup>  
+     
         </div>
     );
 }

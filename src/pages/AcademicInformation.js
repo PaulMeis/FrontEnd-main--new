@@ -4,28 +4,22 @@ import {
     Avatar, 
     StyledTitle, 
     colors,
-    ButtonGroup,
-    TextLink,
-    ExtraText
+    ButtonGroup,  
+    StyledDropdown
 } from "./../components/Styles";
 
-import Logo from './../assets/nick project.png';
-import React, {Component} from 'react';
+import Logo from './../assets/seam.png';
+import React, {Component,} from 'react';
 
 //formik
 import {Form, Formik} from 'formik';
 import { TextInput } from "../components/FormLib";
 import * as Yup from 'yup';
 
-//icons
-import { FiBriefcase } from 'react-icons/fi';
-
-//Loader
-//import Loader, { ThreeCircles } from 'react-loader-spinner';   
-
-//
 
 
+
+//const [role, setRole] = useState("");
 
 const AcademicInformation = () => {
     return (
@@ -83,22 +77,32 @@ const AcademicInformation = () => {
                             type="text"
                             label="Major"
                             placeholder="Software Engeenering"
-                            icon = {<FiBriefcase/>}
+                          
                             />
 
-                            <TextInput
-                            name="role"
-                            type="text"
-                            label="Role"
-                            icon = {<FiBriefcase/>}
-                            />
+
+                <StyledDropdown
+                    name="role"
+                
+                    //onChange={(value) => setRole(value.target.value)}
+                  >
+                    <option></option>
+                    <option>Student</option>
+                    <option>Faculty</option>
+                 
+                  </StyledDropdown>
+
+
+                         
+                         
+                          
 
                             <TextInput
                             name="id"
                             type="text"
                             label="Student ID"
                             placeholder="****"
-                            icon = {<FiBriefcase/>}
+                    
                             />
 
     
@@ -114,9 +118,7 @@ const AcademicInformation = () => {
                 </Formik>
 
                 
-                <ExtraText>
-                    Need Help? <TextLink to="/help">FQA Here!</TextLink>
-                </ExtraText>
+             
 
             </StyledFormArea>
         </div>

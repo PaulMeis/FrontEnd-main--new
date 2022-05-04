@@ -1,4 +1,4 @@
-import {StyledSubTitlePersonalInformation,StyledTitle,StyledFormButton, StyledSubTitle, Avatar, StyledButton, ButtonGroup, StyledFormArea, ExtraText, StyledSubTitleTransaction} from "./../components/Styles";
+import {StyledTitle,StyledFormButton, Avatar, ButtonGroup, StyledFormArea, ExtraText, StyledSubTitleTransaction} from "./../components/Styles";
 
 import React, {Component} from 'react';
 

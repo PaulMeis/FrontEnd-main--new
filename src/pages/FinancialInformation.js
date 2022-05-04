@@ -9,8 +9,8 @@ import {
     ExtraText
 } from "./../components/Styles";
 
-import Logo from './../assets/nick project.png';
 
+import Logo from './../assets/seam.png';
 import React, {Component} from 'react';
 
 //formik
@@ -21,8 +21,6 @@ import * as Yup from 'yup';
 //icons
 import {FiCreditCard} from 'react-icons/fi';
 
-//Loader
-//import Loader, { ThreeCircles } from 'react-loader-spinner'; 
 
 
 const FinancialInformation = () => {

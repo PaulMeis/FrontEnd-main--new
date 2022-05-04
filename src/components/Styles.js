@@ -3,6 +3,8 @@ import styled from 'styled-components';
 //background
 import background from './../assets/background.png';
 
+import {Col } from "reactstrap";
+
 
 // create buttons using react router 
 import {Link} from 'react-router-dom';
@@ -126,6 +128,24 @@ export const StyledTextInput = styled.input`
         color: ${colors.primary};
     }
 `;
+export const StyledDropdown = styled.select`
+width: 280px;
+padding: 15px;
+padding-left: 50px;
+font-size: 17px;
+letter-spacing: 1px;
+color: ${colors.dark1};
+background-color: ${colors.light2};
+border: 0;
+outline: 0;
+display: bock;
+margin: 5px auto 10px auto;
+transition: ease-in-out 0.3s;
+
+  &:focus {
+    border: 0.1rem solid ${colors.secondary};
+  }
+`;
 
 export const StyledLabel = styled.p`
     text-align: center;
@@ -216,4 +236,39 @@ font-size: 21px;
 top: 35px;
 ${(props) => props.right && `right: 15px; `}
 ${(props) => !props.right && `left: 15px; `}
+`;
+
+export const StyledCol = styled(Col)`
+  padding: 1rem;
+`;
+
+export const StyledImage = styled.img`
+  margin: 1rem;
+  width: 60%;
+  transition: all 0.3s ease-out;
+  &:hover {
+    margin: 0rem;
+    width: 65%;
+  }
+`;
+
+const SectionTitle = styled.h2`
+  padding: 1.5rem;
+  padding-top: 2.5rem;
+  color: ${colors.tertiary};
+`;
+export const ImgTitle = styled(SectionTitle)`
+  font-size: 1.4rem;
+  font-weight: 300;
+`;
+
+export const ImgDesc = styled.p`
+  font-size: 1rem;
+`;
+
+
+export const StyledDiv = styled.div`
+  background-color: ${colors.light};
+  margin: 0px -15px;
+  margin-bottom: 5rem;
 `;

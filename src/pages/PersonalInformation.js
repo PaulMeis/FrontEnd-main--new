@@ -1,9 +1,9 @@
-import {StyledSubTitlePersonalInformation,StyledTitle, StyledSubTitle, Avatar, StyledButton, ButtonGroup, StyledFormArea, ExtraText} from "./../components/Styles";
+import {StyledSubTitlePersonalInformation,StyledTitle, Avatar, StyledButton, ButtonGroup, StyledFormArea, ExtraText} from "./../components/Styles";
 
 import React, {Component} from 'react';
 
 //Logo
-import Logo from "./../assets/logo.PNG";
+import Logo from './../assets/Merkel.png';
 
 const PersonalInformation = () => {
     return (

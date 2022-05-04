@@ -5,13 +5,12 @@ import {
     StyledButton,
     ButtonGroup,
     StyledFormArea,
-    colors,
-    
+   
 }
     from "./../components/Styles";
 
 //Logo
-import Logo from "./../assets/image.png";
+import Logo from "./../assets/Merkel.png";
 //Icons
 
 import React from "react";

@@ -5,11 +5,10 @@ import {
     StyledTitle, 
     colors,
     ButtonGroup,
-    TextLink,
-    ExtraText
 } from "./../components/Styles";
 
-import Logo from './../assets/nick project.png';
+
+import Logo from './../assets/seam.png';
 import React, {Component} from 'react';
 
 //formik
@@ -119,10 +118,6 @@ const ContactInformation = () => {
                 </Formik>
 
                 
-               
-                <ExtraText>
-                    Need Help? <TextLink to="/help">FQA Here!</TextLink>
-                </ExtraText>
             </StyledFormArea>
         </div>
     );
